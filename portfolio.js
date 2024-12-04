@@ -91,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('webDevelopmentDescription').textContent = textContent[selectedLanguage].aboutDescription;
     document.getElementById('uiUxDesignDescription').textContent = textContent[selectedLanguage].aboutDescription;
     document.getElementById('mobileAppDescription').textContent = textContent[selectedLanguage].aboutDescription;
-    
     document.querySelector('.projects-container .projects-box:nth-child(1) p').textContent = textContent[selectedLanguage].projectDescriptions[0];
     document.querySelector('.projects-container .projects-box:nth-child(2) p').textContent = textContent[selectedLanguage].projectDescriptions[1];
     document.querySelector('.projects-container .projects-box:nth-child(3) p').textContent = textContent[selectedLanguage].projectDescriptions[2];
@@ -108,3 +107,4 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+// comment to check if git is working as expected with cyberPanel 04/DEC/2024 [AC]
