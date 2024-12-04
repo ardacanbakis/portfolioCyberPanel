@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arda Canbakış</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="https://www.ardacanbakis.com/" class="logo">Portfolio</a>
+      <label for="menu-btn" class="menu-icon"
+        ><i class="fa-solid fa-bars"></i
+      ></label>
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello!</h3>
+        <h1>My name is Arda Canbakış</h1>
+        <h3>
+          and I am a
+          <span class="home-span">
+            <span class="front-span">Frontend</span>
+            <span class="back-span">Backend</span>
+            <span class="full-span">Fullstack</span>
+            <span class="last-span">Developer</span>
+          </span> 
+        </h3>
+        <p>I'm a 31-year-old full-stack developer with a passion for learning new languages, extreme sports, DIY projects and great outdoors.
+        </p>
+        <div class="social-links">
+          <a href="https://tr.linkedin.com/in/ardacanbakis"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/ardacanbakis"><i class="fa-brands fa-github"></i></a>
+          <a href="https://stackoverflow.com/users/19483056/arda-canbak%c4%b1%c5%9f"><i class="fa-brands fa-stack-overflow"></i></a>
+          <a href="https://medium.com/@dev.ardacanbakis"><i class="fa-brands fa-medium"></i></a>
+          <!-- <a href="https://www.twitch.tv/ardacanbakis"><i class="fa-brands fa-twitch"></i></a> -->
+          
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="./assets/1.png" alt="" />
+        <div class="home-img-clip"></div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="./assets/profile1.jpg" alt="Profile Pic" />
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span class="heading-span">Me</span></h2>
+        <h3>Fullstack Developer</h3>
+        <p>
+          <span>
+            Over the last six months, I've immersed myself in learning and training in full-stack 
+            development, gaining hands-on experience in building dynamic web applications. 
+            I'm passionate about coding and excited to collaborate on future projects.
+          </span>
+        </p>
+        <a href="#about" class="about-btn">More About Me</a>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <h2 class="heading">My <span class="heading-span">Services</span></h2>
+      <div class="services-container">
+        <div class="service-box">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>
+            I offer full-stack web development services, including front-end and back-end development, to create responsive and interactive web applications.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-pencil-ruler"></i>
+          <h3>UI/UX Design</h3>
+          <p>
+            Crafting user-friendly interfaces and experiences with a focus on intuitive design and seamless interaction.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-database"></i>
+          <h3>Database Management</h3>
+          <p>
+            Providing efficient database solutions, ensuring data integrity, and optimizing performance for your applications.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">My <span class="heading-span">Projects</span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="./assets/gym.png" alt="Theo's Gym" />
+          <div class="portfolio-content">
+            <h4>Theo's Gym</h4>
+            <p>
+              A responsive gym website with features like a BMI calculator, dynamic class schedules, and e-commerce functionality.
+            </p>
+            <a href="https://www.ardacanbakis.com/gym/gym.html" target="_blank"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="./assets/quizApp.png" alt="quizApp" />
+          <div class="portfolio-content">
+            <h4>Quiz Application</h4>
+            <p>
+              A quiz app using Redux, Node.js, and React, featuring 10 questions with related images and a user-friendly design.
+
+            </p>
+            <a href="https://quiz-app-self-nine.vercel.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="./assets/project-3.jpg" alt="" />
+          <div class="portfolio-content">
+            <h4>Veterinary Management App</h4>
+            <p>
+              VetApp is a comprehensive web application designed to manage veterinary appointments, customer data, animal data, and more. The project features a React frontend and a Spring Boot backend, providing a complete solution for veterinary clinic management.
+            </p>
+            <a href="https://vetapp-ardacanbakis.vercel.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <!-- <div class="portfolio-box">
+          <img src="./assets/project-4.jpg" alt="" />
+          <div class="portfolio-content">
+            <h4>4</h4>
+            <p>
+              4
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="./assets/project-5.jpg" alt="" />
+          <div class="portfolio-content">
+            <h4>5</h4>
+            <p>
+              5
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="./assets/project-6.jpg" alt="" />
+          <div class="portfolio-content">
+            <h4>6</h4>
+            <p>
+              6
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span class="heading-span">Me!</span></h2>
+      <form action="#">
+        <div class="input-div">
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+        </div>
+        <div class="input-div">
+          <input type="number" placeholder="Phone Number" />
+          <input type="text" placeholder="Subject" />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Enter Your Message"
+        ></textarea>
+        <input type="submit" value="Send Mail" class="contact-btn" />
+      </form>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2024 Arda Canbakış. All Rights Reserved.</p>
+      <a href="#home">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </footer>
+  </body>
+</html>

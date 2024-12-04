@@ -69,28 +69,31 @@ document.addEventListener("DOMContentLoaded", function() {
       aboutMe: 'Sobre Mí',
       projects: 'Mis Proyectos',
       contactMe: 'Contáctame',
-      projectDescriptions: [
-        'Una aplicación web integral con un frontend en React y un backend en Spring Boot, que proporciona una solución completa de gestión para cualquier clínica veterinaria.',
-        'Un sitio web de gimnasio responsivo con características como un calculador de IMC, horarios de clases dinámicos y funcionalidad de comercio electrónico.',
-        'Una aplicación de cuestionario utilizando Redux, Node.js y React, con 10 preguntas relacionadas con imágenes y un diseño fácil de usar.',
-        'Una aplicación web que lista varias naves espaciales en el universo de Star Wars y muestra los detalles de una nave seleccionada utilizando SWAPI (Star Wars API).'
-      ],
-      aboutDescription: 'Soy un desarrollador versátil, con experiencia en tecnologías tanto de front-end como de back-end. Mi pasión por la programación solo es igualada por mi deseo de aprender y adaptarme a nuevos desafíos. Me desenvuelvo bien en entornos dinámicos y siempre estoy listo para abordar problemas complejos con soluciones innovadoras.',
       webDevelopmentDescription:'Desde el concepto hasta el despliegue, ofrezco servicios integrales de desarrollo web para dar vida a tu visión. Ya sea que necesites un sitio web simple o una aplicación web compleja, tengo las habilidades y la experiencia para ofrecer soluciones de alta calidad.',
       uiUxDesignDescription:'Crear interfaces fáciles de usar y estéticamente atractivas es mi especialidad. Me enfoco en diseñar experiencias de usuario fluidas, asegurando que tus usuarios puedan navegar por tu sitio con facilidad y disfruten del proceso.',
-      mobileAppDescription:'En el mundo actual, priorizar el móvil es esencial. Desarrollo aplicaciones móviles que se adaptan a tus necesidades, proporcionando una experiencia de usuario fluida y atractiva en cualquier dispositivo.'
+      aboutDescription: 'Soy un desarrollador versátil, con experiencia en tecnologías tanto de front-end como de back-end. Mi pasión por la programación solo es igualada por mi deseo de aprender y adaptarme a nuevos desafíos. Me desenvuelvo bien en entornos dinámicos y siempre estoy listo para abordar problemas complejos con soluciones innovadoras.',
+      mobileAppDescription:'En el mundo actual, priorizar el móvil es esencial. Desarrollo aplicaciones móviles que se adaptan a tus necesidades, proporcionando una experiencia de usuario fluida y atractiva en cualquier dispositivo.',
+      projectDescriptions: [
+      'Una aplicación web integral con un frontend en React y un backend en Spring Boot, que proporciona una solución completa de gestión para cualquier clínica veterinaria.',
+      'Un sitio web de gimnasio responsivo con características como un calculador de IMC, horarios de clases dinámicos y funcionalidad de comercio electrónico.',
+      'Una aplicación de cuestionario utilizando Redux, Node.js y React, con 10 preguntas relacionadas con imágenes y un diseño fácil de usar.',
+      'Una aplicación web que lista varias naves espaciales en el universo de Star Wars y muestra los detalles de una nave seleccionada utilizando SWAPI (Star Wars API).'
+      ]
     },
   };
-
+  
   languageSwitcher.addEventListener('change', function() {
     const selectedLanguage = languageSwitcher.value;
     document.getElementById('greeting').textContent = textContent[selectedLanguage].greeting;
     document.getElementById('name').textContent = textContent[selectedLanguage].name;
     document.getElementById('description').textContent = textContent[selectedLanguage].description;
+
     document.getElementById('aboutDescription').textContent = textContent[selectedLanguage].aboutDescription;
-    document.getElementById('webDevelopmentDescription').textContent = textContent[selectedLanguage].aboutDescription;
-    document.getElementById('uiUxDesignDescription').textContent = textContent[selectedLanguage].aboutDescription;
-    document.getElementById('mobileAppDescription').textContent = textContent[selectedLanguage].aboutDescription;
+    document.getElementById('webDevelopmentDescription').textContent = textContent[selectedLanguage].webDevelopmentDescription;
+    document.getElementById('uiUxDesignDescription').textContent = textContent[selectedLanguage].uiUxDesignDescription;
+    document.getElementById('mobileAppDescription').textContent = textContent[selectedLanguage].mobileAppDescription;
+
+
     document.querySelector('.projects-container .projects-box:nth-child(1) p').textContent = textContent[selectedLanguage].projectDescriptions[0];
     document.querySelector('.projects-container .projects-box:nth-child(2) p').textContent = textContent[selectedLanguage].projectDescriptions[1];
     document.querySelector('.projects-container .projects-box:nth-child(3) p').textContent = textContent[selectedLanguage].projectDescriptions[2];

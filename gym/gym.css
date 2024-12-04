@@ -1,0 +1,1075 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f1f8ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* H2 headers with orange lines as requested. */
+
+h2 {
+    font-weight: bolder;
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 3%;
+    text-align: center;
+    color: #4d638b;
+    text-transform: uppercase;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 50%;
+    width: 7%;
+    height: 6px; 
+    background-color: #febf5e; 
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+/* Header section styles */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    padding: 0.5% 0.5%;
+    height: 5vh;
+}
+
+#nav-logo {
+    cursor: pointer;
+    height: 7vh;
+    margin-left:2.5%;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    flex:auto;
+    margin-right:1.5%;
+}
+
+#nav-links li {
+    margin-top: .5%;
+}
+
+#nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all ease 0.3s;
+    font-weight: bold;
+    font-size: 0.9rem; 
+}
+
+#nav-links li a:hover {
+    background-color: #223868;
+    color: aqua;
+}
+
+#join-us {
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    margin-left:2.5%;
+    font-size: 0.9rem;  
+}
+
+#join-us:hover {
+    background-color: darkorange;
+    color: black;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+/* RESPONSIVE DESIGN Navbar Section FOR 576PX */
+@media (max-width: 576px) {
+    #navbar {
+        flex-direction: row;
+        padding: 10px;
+        background-color: #355592;
+        height: auto;
+    }
+    #nav-logo {
+        cursor: pointer;
+        height: 6vh;
+    
+    }
+    #nav-links {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        margin-top: 10px;
+    }
+    #nav-links.active {
+        display: flex;
+    }
+
+    #join-us {
+        display: none;
+    }
+    #nav-links li {
+        margin: 5px 0;
+    }
+    .hamburger {
+        display: flex;
+        align-self: flex-end;
+        margin-right: 15%;
+        margin-bottom: 3%;
+    }
+}
+
+/* Hero section styles */
+#hero {
+    position: relative;
+    height: 40vh;
+    background-color: #222; 
+    background-position: center;
+    padding: 2.5% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15%;
+}
+
+#hero p {
+    background-color:transparent;
+    font-size: 100%;
+    max-width: 100%;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/hero-man.jpg');
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.overlay {
+    height: 100%;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    max-width: 80%;
+    color: white;
+    margin: 0 auto;
+    padding-top: 10%; 
+    padding-bottom: 10%; 
+}
+.overlay .label {
+    display: inline-block;
+    background-color: #355592; 
+    color: white;
+    font-weight: 700;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    max-width: 35%;  
+}
+
+.hero-buttons {
+    padding-top:3%;
+    display: flex;
+    gap: 2.5%;
+}
+
+#sign-up, #details {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#sign-up {
+    background-color: #355592;
+    color: white;
+    border: none;
+}
+
+#sign-up:hover {
+    background-color: aqua;
+    color: black;
+}
+
+#details {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+#details:hover {
+    background: white;
+    color: black;
+}
+/* RESPONSIVE DESIGN Hero Section FOR 576PX */
+
+@media (max-width: 576px) {
+   
+    #hero {
+        position: relative;
+        height: 50vh;
+        padding: 2.5% 0%;
+        padding-bottom: 25%;
+    }
+    .overlay {
+        max-width: 90%;
+        padding-top: 20%;
+        text-align: left;
+    }
+    .overlay h1 {
+        font-size: 1.5rem;
+        left: 10%;
+        text-align: left;
+        max-width: 60%;
+        font-size: 38px;
+        font-weight: bolder;
+    }
+
+    .hero-buttons {
+        margin-top: 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #sign-up, #details {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }  
+
+}
+/* Stats Section */
+#stats {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2% 2%;
+    position: relative;
+    background: #f1f8ff;
+    text-align: center;
+}
+
+.stats-container {
+ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats-box {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stats-box:hover {
+    transform: translateY(-10px);
+}
+
+.stats-box h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+    color: #2e4f8e;
+    font-weight: bolder;
+}
+
+.stats-box p {
+    font-size: 1rem;
+    color: black;
+    font-weight: bolder;
+}
+
+/* Our Classes */
+#classes {
+    background: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+/* #classes p {
+    margin-left: 25%;
+    margin-right: 25%;
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 1%;
+} */
+.class-buttons {
+    text-align: center;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-bottom: 1%;
+}
+
+.class-buttons button {
+    background-color: #355592;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.class-buttons button.active {
+    background-color: #febf5e; 
+}
+.class-buttons button:hover {
+    background-color: #febf5e;
+}
+
+.class-section {
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.class-description {
+    
+    flex: 1;
+    padding-right: 10%;
+    text-align: left;
+    max-width: 50%;
+}
+.image-container {
+    flex: 1;
+    padding: 20px;
+   
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+/* BMI Calculator Styles */
+#BMI {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+.bmi-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: flex-start;
+}
+
+.bmi-description, .bmi-results {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+.bmi-description h6 {
+    text-align: left;
+    color: #355592;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.bmi-description p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+}
+
+.inputs input {
+    font-size: 1rem;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.inputs input[type="number"] {
+    padding: 1%;
+    border: 2px solid black; 
+    border-radius: 5px;
+    text-align: left;
+}
+
+.bmi-label {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+#bmi-index-image {
+    width: 100%; 
+    height: auto;
+}
+
+#arrow-container {
+    width: 100%;
+    position: relative;
+}
+
+#orange-arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid orange;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+/* Best Trainers */
+#trainers {
+    text-align: center;
+    padding: 5%;
+}
+
+#trainers p {
+    margin-left: 25%;
+    margin-right: 25%;
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.trainer {
+    position: relative;
+    width: 300px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.trainer-info {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    width: 95%;
+    height: 25%;
+    background-color: #355592;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    visibility: hidden;
+    overflow: hidden;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+
+.trainer-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.trainer:hover .trainer-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.trainer-info h4 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trainer-frame {
+    background-color: #e69e2c;
+    padding: 2px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.trainer-frame img {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.blue-1, .blue-2 {
+    position: absolute;
+    background-color: rgba(53, 85, 146, 1);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.blue-1 {
+    top: -9px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 103%;
+    width: 30%;
+    transform: translateX(0%);
+}
+
+.blue-2 {
+    top: 0;
+    left: -9px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 30%;
+    width: 107%;
+    transform: translateY(0%);
+
+}
+
+.trainer:hover .trainer-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+.trainer:hover .blue-1 {
+    width: 70%;
+}
+
+.trainer:hover .blue-2 {
+    height: 70%;
+}
+/* Purchase Section */
+#purchase {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2%;
+}
+
+#purchase p {
+    margin-left: 25%;
+    margin-right: 25%;
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.purchase-items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.item {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.item h4 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.item h5 {
+    font-size: 1rem;
+    color: black;
+
+}
+
+.add-to-cart {
+    background-color: #b9b3a9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7.5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #cc7a00;
+}
+
+/* Client Reviews */
+#client-reviews {
+    text-align: center;
+    padding: 5%;
+}
+
+.reviews-container {
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjusted gap for spacing between reviews */
+}
+
+.review {
+    margin-top: 3%;
+    position: relative;
+    display: inline-block;
+    max-width: 35%; 
+    margin-bottom: 20px; /* Add spacing between reviews */
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px; 
+}
+
+.client-image img {
+    border-radius: 50%;
+    width: 70px; 
+    height: 70px;
+}
+
+.client-details {
+    text-align: left;
+}
+
+.client-details h4 {
+    margin: 0;
+    color: black; /* Match the theme color */
+    font-weight: bold;
+}
+
+.client-details h5 {
+    margin: 0;
+    color: #888;
+}
+
+.client-review {
+    background-color: #355592;
+    padding: 15px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.client-review:before {
+    content: "";
+    position: absolute;
+    background-color: rgb(128, 150, 190);
+    left: 0;
+    top: 100%;
+    width: 40px;
+    height: 35px;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.client-review:after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+    background-color: rgb(128, 150, 190);
+    right: 0;
+    top: 100%;
+    width: 40px;
+    height: 35px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5%;
+}
+
+.contact-container {
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.contact-details {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 10px;
+    margin-bottom: 10%;
+}
+
+.contact-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    
+}
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.appointment-form input
+{
+    width: 100%;
+    height: 110%;
+    margin-bottom: 15px;
+    background-color: #f1f8ff;
+    border: none;
+    border-radius: 3px;
+}
+
+.appointment-form textarea {
+    width: 100%;
+    height: 100px; 
+    border: none;
+    background-color: #f1f8ff;
+}
+#google-map iframe {
+    width:400px;   
+}
+
+/* Footer */
+footer {
+    background-color: #325493;
+    color: #fff;
+    padding: 40px 0; /* Adjust padding for more spacing */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    text-align: left;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+#footer-logo {
+    width: 150px; 
+    margin-right: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #ffffff55;
+    padding-top: 15px;
+}
+/* RESPONSIVE DESIGN Footer Section FOR 576PX */
+@media (max-width: 576px) {
+    footer {
+        padding: 20px 0;
+    }
+    .footer-content {
+        flex-direction: row;
+    }
+    .footer-content p {
+        text-align: center;
+    }
+    .footer-section {
+        text-align: center;
+    }
+}
+
+
+/* Stats Section */
+@media (max-width: 576px) {
+    
+    #stats {
+        margin: 0 5%;
+        padding: 2% 0;
+    }
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .stats-box {
+        width: 75%;
+    }
+}
+
+/* Our Classes Section */
+@media (max-width: 576px) {
+    .class-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+    .class-section {
+        flex-direction: column;
+        margin: 0 5%;
+    }
+    .class-description {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .image-container img {
+        max-width: 100%;
+    }
+}
+
+/* BMI Calculator Section */
+@media (max-width: 576px) {
+    #BMI {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .bmi-container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .bmi-description h6 {
+        text-align: center;
+        color: #355592;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .bmi-description, .bmi-results {
+        width: 100%;
+    }
+    .inputs {
+        flex-direction: row;
+        align-items: center;
+    
+    }
+    .inputs input {
+        width: 50%;
+        align-items: left;
+    }
+}
+/* Best Trainers Section */
+@media (max-width: 576px) {
+    #trainers {
+        padding: 20px 0;
+    }
+    .trainer-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .trainer {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .blue-1 {
+        top: -6px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 103%;
+        width: 30%;
+        transform: translateX(0%);
+    }
+    .blue-2 {
+        top: 0;
+        left: -15px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 30%;
+        width: 107%;
+        transform: translateY(0%);
+    
+    }
+}
+/* Purchase Section */
+@media (max-width: 576px) {
+    .purchase-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item {
+        width: 90%;
+    }
+}
+/* Review Section */
+@media (max-width: 576px) {
+
+    .client-info{
+        align-items: left;
+        gap:0px;
+
+    }
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .review {
+        max-width: 80%;
+        text-align: center;
+        display: inline-block;
+    }
+    .client-image {
+        align-items: left;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .client-review {
+        text-align: center;
+        padding: 15px;
+        position: relative;
+        background-color: #355592;
+        color: white;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+}
+/* Contact Section */
+@media (max-width: 576px) {
+#contact {
+    padding: 5%;
+}
+
+.contact-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 20px;
+}
+
+.contact-details {
+    text-align: center;
+    max-width: 80%;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #f1f8ff;
+}
+
+#google-map iframe {
+    width: 100%;
+    max-width: 400px;
+}
+}
